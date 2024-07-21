@@ -3,28 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-"""
-order_df = pd.read_csv("C:\\Users\\LENOVO\\OneDrive\\Documents\\OnlineRetail-master\\order_items.csv")
-review_df = pd.read_csv("C:\\Users\\LENOVO\\OneDrive\\Documents\\OnlineRetail-master\\order_reviews.csv")
-print(order_df.shape)
-print(review_df.shape)
-print(review_df.shape)
-print([review_df.columns])
-#Q1. Some customers didn't write a review. But why are they happy or dissatisfied?
-blank_reviews = review_df['review_comment_message'].isnull() | (review_df['review_comment_message'] =='')
-review_df['satisfied_or_not'] = (review_df['review_score'] >= 3) | (review_df['review_score'].isnull() & blank_reviews)
-satisfaction_count = review_df['satisfied_or_not'].value_counts()
 
-review_df['satisfied_or_not'] = review_df['satisfied_or_not'].apply(lambda x: 'Satified' if x else 'Not-satisfied')
-#categorised based on rating score
-print(satisfaction_count)
-plt.figure(figsize=(20,15))
-sns.countplot(data=review_df,x='satisfied_or_not',hue='satisfied_or_not')
-plt.title('Customer Satisfaction')
-plt.xlabel('Satisfaction')
-plt.ylabel('Count')
-plt.show()
-"""
 
 order_df = pd.read_csv("C:\\Users\\LENOVO\\OneDrive\\Documents\\OnlineRetail-master\\order_items.csv")
 #Display all the column names
